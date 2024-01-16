@@ -18,9 +18,10 @@ Technologies Used
 
 **How to Use**
 1. Clone the repository to your local machine.
-2. Install dependencies using npm install.
-3. Run the application with npm start.
-4. Explore and enjoy discovering new and exciting recipes!
+2. Install dependencies using **npm install**.
+3. Install axios using **npm install axios**
+4. Run the application with **npm start**.
+5. Explore and enjoy discovering new and exciting recipes!
 
 Project Structure
 The project follows a well-organized structure with components, styles, and utility functions, making it easy to extend and maintain.
