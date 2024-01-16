@@ -1,0 +1,262 @@
+@import url(../../App.css);
+
+.navbar {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 60px;
+    position: relative;
+    z-index: 999;
+    transition: transition;
+}
+
+.navbar .navbar-brand-text {
+    margin-left: 5px;
+}
+
+.navbar .navbar-list-items {
+    margin-right: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: yellow;
+}
+
+.navbar .navbar-search-btn {
+    margin-right: 12px;
+}
+
+.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header .header-content {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image2.jpg") center/cover no-repeat;
+}
+
+.header .header-title {
+    margin-top: 2.4rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 12px; /* Tambahkan margin ke formulir pencarian */
+}
+
+.search-form .form-control-input {
+    box-shadow: green;
+    width: 100%; /* Mengisi lebar maksimal container */
+    min-width: 300px;
+    font-size: 16px;
+    height: 55px;
+    padding: 0px 3.2rem;
+    border-radius: 2.8rem !important;
+    margin-right: 1.2rem;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .search-form {
+        flex: 1; /* Memberikan flex 1 agar input search mengisi sisa ruang yang tersedia */
+        margin-right: 0; /* Hapus margin pada layar kecil */
+    }
+
+    .search-form .form-control-input {
+        width: 100%; /* Mengisi lebar maksimal container */
+        max-width: none; /* Hapus batasan lebar maksimal pada layar kecil */
+        margin-right: 0; /* Hapus margin pada layar kecil */
+    }
+
+    .search-form .form-submit-btn {
+        margin-left: 1rem; /* Sesuaikan margin top untuk tata letak yang baik */
+    }
+}
+
+
+.search-form .form-submit-btn {
+    width: 55px;
+    height: 55px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-form .form-submit-btn .btn-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.search-form .form-submit-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.search-form .form-submit-btn:hover {
+    background: white;
+}
+
+.search-form .form-submit-btn:hover .btn-icon {
+    transform: scale(0.9);
+    color: yellow;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .navbar .navbar-search-btn {
+        margin-right: 0; /* Menghilangkan margin pada tombol pencarian di layar kecil */
+    }
+
+    .search-form {
+        flex: 1; /* Memberikan flex 1 untuk input sehingga mengisi sisa ruang yang tersedia */
+        margin-right: 0; /* Menghilangkan margin pada layar kecil */
+    }
+
+    .search-form .form-control-input {
+        margin-right: 0; /* Menghilangkan margin pada layar kecil */
+    }
+
+    .search-form .form-submit-btn {
+        width: 40px; /* Mengurangi ukuran tombol pada layar kecil */
+        height: 40px; /* Mengurangi ukuran tombol pada layar kecil */
+    }
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+    .navbar .navbar-list-items {
+        display: flex;
+        margin-right: 0;
+    }
+
+    li {
+        float: none;
+        display: inline-block;
+    }
+
+    .navbar-btns ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    li a {
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+
+    .navbar-menu-icon {
+        display: none; /* Sembunyikan icon di layar desktop */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .navbar .navbar-list-items {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    li {
+        display: block;
+    }
+
+    .navbar-btns {
+        text-align: right;
+    }
+
+    .navbar-btns ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li a {
+        padding: 14px 0;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .navbar-menu-icon {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-menu-icon.open {
+        transform: rotate(90deg);
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    /* ... (sebelumnya CSS Anda) */
+
+    .mobile-menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px; /* Tinggi navbar */
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-menu li {
+        display: block;
+    }
+
+    .mobile-menu a {
+        padding: 14px 0;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid #ccc; /* Garis pemisah setiap item */
+    }
+
+    .mobile-menu li:last-child a {
+        border-bottom: none; /* Hilangkan garis pada item terakhir */
+    }
+}
+
+
