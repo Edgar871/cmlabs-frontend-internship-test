@@ -19,7 +19,7 @@ Technologies Used
 **How to Use**
 1. Clone the repository to your local machine.
 2. Install dependencies using **npm install**.
-3. Install axios using **npm install axios**
+3. Install axios using **npm install axios**.
 4. Run the application with **npm start**.
 5. Explore and enjoy discovering new and exciting recipes!
 
